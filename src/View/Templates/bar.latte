@@ -2,4 +2,15 @@
     <div id="network_times">
         <div>Request took <span>{$request_took_ms}</span> ms</div>
     </div>
+    <div>
+{*        {foreach $headers as $header => $value}*}
+{*            <div>{$header}: {$value}</div>*}
+{*        {/foreach}*}
+    </div>
+    <div>
+        <div>{$request_url->getHost()}</div>
+        <div>{$request_url->getPort()}</div>
+        <div>{$request_url->getPath()}</div>
+        <div>{$request_url->getQuery()}</div>
+    </div>
 </div>
