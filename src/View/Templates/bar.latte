@@ -1,16 +1,32 @@
-<div style="{$styles}">
-    <div id="network_times">
-        <div>Request took <span>{$request_took_ms}</span> ms</div>
-    </div>
-    <div>
-{*        {foreach $headers as $header => $value}*}
-{*            <div>{$header}: {$value}</div>*}
-{*        {/foreach}*}
-    </div>
-    <div>
-        <div>{$request_url->getHost()}</div>
-        <div>{$request_url->getPort()}</div>
-        <div>{$request_url->getPath()}</div>
-        <div>{$request_url->getQuery()}</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+<style>
+    #octo_bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-family: "JetBrains Mono", monospace;
+        padding: .8rem .5rem;
+        border: 2px solid coral;
+        z-index: 10;
+    }
+
+    #octo_bar > .request {
+        padding: .5rem;
+        border: 1px solid lightgray;
+        border-radius: .7rem;
+        transition-duration: 200ms;
+        cursor: pointer;
+    }
+
+    #octo_bar > .request:hover {
+        background-color: orange;
+    }
+</style>
+<div id="octo_bar">
+    <div class="request">
+        Request
     </div>
 </div>

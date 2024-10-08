@@ -31,6 +31,8 @@ class ShutdownHandler
         $template_params['headers'] = self::$request_extractor->getHeaders();
         $template_params['request_url'] = self::$request_extractor->getRequestUri();
 
+        $template_params['bar_style'] = "width: 50%; height: 50%; background-color: #37a323;";
+
         Renderer::renderBar($template_params);
     }
 }

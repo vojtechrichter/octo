@@ -9,7 +9,7 @@ final class Uri
     private string $host;
     private string $port;
     private string $path;
-    private string $query;
+    private ?string $query;
 
     public function __construct()
     {
